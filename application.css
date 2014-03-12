@@ -1,0 +1,66 @@
+body {
+	/*background-color: gray;*/
+}
+
+#wrapper {
+	background-color: white;
+	width: 80%;
+	min-height:100%;
+	height: auto;
+	margin: 5px auto;
+}
+
+h1 {
+	text-align:center; 
+}
+
+h2 {
+	position: relative;
+	left: 10px;
+}
+
+li {
+	display: inline-block;
+	min-width: 100px;
+}
+
+ul {
+	clear: both;
+	position: relative;
+	margin: 10px;
+}
+
+.nav-item {
+	width: 150px;
+}
+
+.title {
+	text-align: center;
+}
+
+.description {
+	width: 30%;
+}
+
+.name {
+	width: 20%;
+}
+
+.options {
+	width: auto;
+}
+
+.addlink {
+	float: right;
+	position: relative;
+	right: 20px;
+	bottom: 8px;
+}
+
+.listtitle {
+	background-color: lightblue;
+}
+
+#quantity {
+	width: 80px;
+}
