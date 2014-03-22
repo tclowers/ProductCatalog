@@ -56,6 +56,15 @@ class Router {
 				}
 				
 				break;
+			case 'customer':
+				try {
+					$controller = new CustomerController;
+					return $controller;
+				} catch(Exception $e) {
+					echo "<strong>Can't create controller object: </strong>" . $this->resource . "<br/>";
+				}
+				
+				break;
 		}
 	}
 

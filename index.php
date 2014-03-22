@@ -14,8 +14,8 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 				<li class="nav-item"><a href="index.php?resource=product&action=index">Products</a></li>
-				<!--<li class="nav-item"><a href="index.php?resource=customer&action=index">Customers</a></li>
-				<li class="nav-item"><a href="index.php?resource=order&action=index">View Orders</a></li>-->
+				<li class="nav-item"><a href="index.php?resource=customer&action=index">Customers</a></li>
+				<!--<li class="nav-item"><a href="index.php?resource=order&action=index">View Orders</a></li>-->
 				</ul>
 			</div>
 		</nav>

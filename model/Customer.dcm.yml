@@ -1,0 +1,29 @@
+#model/Customer.dcm.yml
+Customer:
+  type: entity
+  table: customer
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    name:
+      type: string
+    address1:
+      type: text
+    address2:
+      type: text
+      nullable: TRUE
+    city:
+      type: text
+    state:
+      type: text
+    zip:
+      type: integer
+    phone:
+      type: integer
+      nullable: TRUE
+    lastUpdate:
+      type: datetime
+      nullable: TRUE
