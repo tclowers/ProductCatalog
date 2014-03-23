@@ -1,5 +1,6 @@
 <?php
 // src/Customer.php
+use Doctrine\Common\Collections\ArrayCollection;
 class Customer
 {
 
@@ -13,6 +14,12 @@ class Customer
     protected $zip;
     protected $phone;
     protected $lastUpdate = null;
+    protected $itemsPurchased = null;
+
+    public function __construct()
+    {
+        $this->itemsPurchased = new ArrayCollection();
+    }
 
     //getters and setters
     public function getId()
@@ -102,5 +109,10 @@ class Customer
         $this->lastUpdate = $lastUpdate;
     }
 
+    //oneToMany
+    public function purchaseItem($productOrder)
+    {
+        $this->itemsPurchased[] = $productOrder;
+    }
 }
 ?>

@@ -1,5 +1,6 @@
 <?php
 // src/Product.php
+use Doctrine\Common\Collections\ArrayCollection;
 class Product
 {
 
@@ -13,6 +14,12 @@ class Product
     protected $weight = null;
     protected $dollarValue;
     protected $lastUpdate = null;
+    protected $ordersPlaced;
+
+    public function __construct()
+    {
+        $this->ordersPlaced = new ArrayCollection();
+    }
 
     //getters and setters
     public function getId()
@@ -100,6 +107,12 @@ class Product
     public function setLastUpdate($lastUpdate)
     {
         $this->lastUpdate = $lastUpdate;
+    }
+
+    //oneToMany
+    public function placeOrder($productOrder)
+    {
+        $this->ordersPlaced[] = $productOrder;
     }
 
 }

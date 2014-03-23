@@ -9,8 +9,8 @@
 		<th class="options">Options</th>
 	</tr>
 <?php
-	for($i = 0; $i < count($allrows); $i++) {
-		$row = $allrows[$i];
+	for($i = 0; $i < count($results); $i++) {
+		$row = $results[$i];
 ?>
 
 		<tr>

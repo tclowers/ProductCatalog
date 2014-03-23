@@ -27,3 +27,7 @@ Customer:
     lastUpdate:
       type: datetime
       nullable: TRUE
+  oneToMany:
+    itemsPurchased:
+      targetEntity: ProductOrder
+      mappedBy: purchaser

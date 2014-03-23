@@ -30,3 +30,7 @@ Product:
     lastUpdate:
       type: datetime
       nullable: TRUE
+  oneToMany:
+    ordersPlaced:
+      targetEntity: ProductOrder
+      mappedBy: productOrdered

@@ -46,6 +46,11 @@
 			break;
 
 		case 'edit':
+			//I hate this, but don't want to completely redesign right now
+			if ($resource == 'order') {
+				$customerController = new CustomerController;
+				$customers = $customerController->index();
+			}
 			// show the existing data
 			$result = $controller->show();
 
@@ -66,11 +71,18 @@
 			//insert the item into the database
 			$made = $controller->create();
 			$inserted_id = $controller->index();
-			$allrows = $controller->index();
+			$results = $controller->index();
 			require $indexview;
 			break;
 
 		case 'new':
+			//I hate this, but don't want to completely redesign right now
+			if($resource == 'order'){
+				$customerController = new CustomerController;
+				$customers = $customerController->index();
+				$productController = new ProductController;
+				$product = $productController->show();
+			}
 			// render new item view
 			require $newview;
 			break;
@@ -79,13 +91,13 @@
 			// delete the item from the database
 			$destroyed = $controller->destroy();
 			//render index view
-			$allrows = $controller->index();
+			$results = $controller->index();
 			require $indexview;
 			break;
 
 		case 'index':
 			//grab all of our rows from the database
-			$allrows = $controller->index();
+			$results = $controller->index(); //array from Product and Customer, object from ProductOrder
 			//render index view
 			require $indexview;
 			break;

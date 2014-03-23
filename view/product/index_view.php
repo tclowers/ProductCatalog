@@ -9,8 +9,8 @@
 		<th class="options title">Options</th>
 	</tr>
 <?php
-	for($i = 0; $i < count($allrows); $i++) {
-		$row = $allrows[$i];
+	for($i = 0; $i < count($results); $i++) {
+		$row = $results[$i];
 ?>
 		<tr>
 			<td class='name'><?php echo $row['name']; ?></td>
@@ -28,7 +28,7 @@
 				<a href='index.php?resource=product&action=show&id=<?php echo $row['id']; ?>'>View</a> | 
 				<a href='index.php?resource=product&action=edit&id=<?php echo $row['id']; ?>'>Edit</a> | 
 				<a href='index.php?resource=product&action=destroy&id=<?php echo $row['id']; ?>' class='delete-link'>Delete</a>
-				<!-- | <a href='index.php?resource=order&action=new&product_id=<?//php echo $row['id']; ?>'>Place Order</a>-->
+				 | <a href='index.php?resource=order&action=new&id=<?php echo $row['id']; ?>'>Place Order</a>
 			</td>
 		</tr>
 <?php
