@@ -10,10 +10,10 @@ CREATE TABLE Product
 	id int NOT NULL AUTO_INCREMENT,
 	name VARCHAR(100) character set utf8 collate utf8_unicode_ci,
 	description TEXT character set utf8 collate utf8_unicode_ci,
-	cmWidth DECIMAL(7,2),
-	cmLength DECIMAL(7,2),
-	cmHeight DECIMAL(7,2),
-	kgWeight DECIMAL(8,2),
+	width DECIMAL(7,2),
+	length DECIMAL(7,2),
+	height DECIMAL(7,2),
+	weight DECIMAL(8,2),
 	dollarValue DECIMAL(8,2),
 	numInStock int,
 	lastUpdate TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -26,12 +26,12 @@ CREATE TABLE Customer
 (
 	id int NOT NULL AUTO_INCREMENT,
 	name VARCHAR(100) character set utf8 collate utf8_unicode_ci,
-	streetAddress1 VARCHAR(100) character set utf8 collate utf8_unicode_ci,
-	streetAddress2 VARCHAR(100) character set utf8 collate utf8_unicode_ci,
+	address1 VARCHAR(100) character set utf8 collate utf8_unicode_ci,
+	address2 VARCHAR(100) character set utf8 collate utf8_unicode_ci,
 	city VARCHAR(100) character set utf8 collate utf8_unicode_ci,
 	state VARCHAR(5) character set utf8 collate utf8_unicode_ci,
-	zipCode int,
-	phoneNumber varchar(20) character set utf8,
+	zip int,
+	phone varchar(20) character set utf8,
 	lastUpdate TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 			ON UPDATE CURRENT_TIMESTAMP,
 	PRIMARY KEY (id)
