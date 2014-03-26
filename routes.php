@@ -1,8 +1,7 @@
 <?php
-
 	//autoload classes
-	include_once 'autoloader.php';
-
+	//include_once 'autoloader.php';
+	require_once __DIR__.'/vendor/autoload.php';
 
 	// Here we create a new router object
 	// to interpret which resource and action

@@ -1,4 +1,5 @@
 <?php
+//namespace Models;
 // src/Customer.php
 use Doctrine\Common\Collections\ArrayCollection;
 class Customer

@@ -1,0 +1,36 @@
+#model/Product.dcm.yml
+Product:
+  type: entity
+  table: products
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    name:
+      type: string
+    description:
+      type: text
+      nullable: TRUE
+    width:
+      type: float
+      nullable: TRUE
+    length:
+      type: float
+      nullable: TRUE
+    height:
+      type: float
+      nullable: TRUE
+    weight:
+      type: float
+      nullable: TRUE
+    dollarValue:
+      type: float
+    lastUpdate:
+      type: datetime
+      nullable: TRUE
+  oneToMany:
+    ordersPlaced:
+      targetEntity: ProductOrder
+      mappedBy: productOrdered

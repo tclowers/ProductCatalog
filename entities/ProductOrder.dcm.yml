@@ -1,0 +1,24 @@
+#model/ProductOrder.dcm.yml
+ProductOrder:
+  type: entity
+  table: product_orders
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    quantity:
+      type: integer
+    orderDate:
+      type: datetime
+    lastUpdate:
+      type: datetime
+      nullable: TRUE
+  manyToOne:
+    productOrdered:
+      targetEntity: Product
+      inversedBy: ordersPlaced
+    purchaser:
+      targetEntity: Customer
+      inversedBy: itemsPurchased
